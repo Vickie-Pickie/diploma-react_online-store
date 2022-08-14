@@ -1,6 +1,10 @@
-import {useEffect, useState, useCallback} from "react";
-import {useLazyGetCategoryItemsQuery} from "../api/products";
-import {useSearchParams} from "react-router-dom";
+import {
+  useEffect,
+  useState,
+  useCallback,
+} from 'react';
+import { useLazyGetCategoryItemsQuery } from '../api/products';
+import { useSearchParams } from 'react-router-dom';
 
 const useProducts = () => {
   const [fetchCategoryItems, { data, isFetching, isError }] = useLazyGetCategoryItemsQuery();
@@ -18,7 +22,7 @@ const useProducts = () => {
       offset,
       q: search,
     });
-  }
+  };
 
   useEffect(() => {
     loadProducts();
@@ -74,6 +78,6 @@ const useProducts = () => {
     searchParams,
     setSearchParams,
   }
-}
+};
 
 export default useProducts

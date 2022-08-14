@@ -1,7 +1,10 @@
-import React, { useState } from "react";
-import MenuItem from "./MenuItem";
-import { NavLink, useNavigate } from "react-router-dom";
-import {useSelector} from "react-redux";
+import React, { useState } from 'react';
+import MenuItem from './MenuItem';
+import {
+  NavLink,
+  useNavigate,
+} from 'react-router-dom';
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const items = useSelector(state => state.cart.items);

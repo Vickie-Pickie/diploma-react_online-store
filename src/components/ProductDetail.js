@@ -1,8 +1,14 @@
-import { useLazyGetProductDetailQuery } from "../api/products";
-import {useEffect, useState} from "react";
-import {useNavigate, useParams} from "react-router-dom";
-import Preloader from "./Preloader";
-import {useDispatch} from "react-redux";
+import { useLazyGetProductDetailQuery } from '../api/products';
+import {
+  useEffect,
+  useState,
+} from 'react';
+import {
+  useNavigate,
+  useParams,
+} from 'react-router-dom';
+import Preloader from './Preloader';
+import { useDispatch } from 'react-redux';
 import cart from '../slices/cart';
 
 const ProductDetail = () => {

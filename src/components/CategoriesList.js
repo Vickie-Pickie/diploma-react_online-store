@@ -1,6 +1,6 @@
-import {useLazyGetListCategoriesQuery} from "../api/products";
-import {useEffect, useState} from "react";
-import CategoryItem from "./CategoryItem";
+import { useLazyGetListCategoriesQuery } from '../api/products';
+import { useEffect } from 'react';
+import CategoryItem from './CategoryItem';
 
 const CategoriesList = ({onCategoryChange, activeCategory}) => {
   const [fetchCategories, {data: categories = [], isLoading, isError }] = useLazyGetListCategoriesQuery();
@@ -39,7 +39,6 @@ const CategoriesList = ({onCategoryChange, activeCategory}) => {
     }
     </>
   );
-
 };
 
 export default CategoriesList;

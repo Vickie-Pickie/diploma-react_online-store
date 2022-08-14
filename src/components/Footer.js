@@ -1,5 +1,5 @@
-import {useState} from "react";
-import MenuItem from "./MenuItem";
+import { useState } from 'react';
+import MenuItem from './MenuItem';
 
 const Footer = () => {
   const [menu] = useState([

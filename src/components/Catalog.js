@@ -1,8 +1,8 @@
-import CategoriesList from "./CategoriesList";
-import ProductItem from "./ProductItem";
-import Preloader from "./Preloader";
-import useProducts from "../hooks/useProducts";
-import Search from "./Search";
+import CategoriesList from './CategoriesList';
+import ProductItem from './ProductItem';
+import Preloader from './Preloader';
+import useProducts from '../hooks/useProducts';
+import Search from './Search';
 
 const Catalog = ({showSearch = false}) => {
   const {

@@ -1,8 +1,11 @@
-import {useState} from "react";
-import {useCreateOrderMutation} from "../api/order";
-import {useDispatch, useSelector} from "react-redux";
-import Preloader from "./Preloader";
-import cart from "../slices/cart";
+import { useState } from 'react';
+import { useCreateOrderMutation } from '../api/order';
+import {
+  useDispatch,
+  useSelector,
+} from 'react-redux';
+import Preloader from './Preloader';
+import cart from '../slices/cart';
 
 const OrderForm = () => {
   const [phone, setPhone] = useState('');

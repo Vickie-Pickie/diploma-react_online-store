@@ -1,4 +1,7 @@
-import {useEffect, useState} from "react";
+import {
+  useEffect,
+  useState,
+} from 'react';
 
 const Search = ({onSubmit, search}) => {
   const [input, setInput] = useState(search);

@@ -1,7 +1,7 @@
-import {useLazyGetTopSalesQuery} from "../api/products";
-import {useEffect} from "react";
-import ProductItem from "./ProductItem";
-import Preloader from "./Preloader";
+import { useLazyGetTopSalesQuery } from '../api/products';
+import { useEffect } from 'react';
+import ProductItem from './ProductItem';
+import Preloader from './Preloader';
 
 const TopSales = () => {
   const [fetchTopSales, { data = [], isLoading, isError }] = useLazyGetTopSalesQuery();

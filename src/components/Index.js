@@ -1,5 +1,5 @@
-import TopSales from "./TopSales";
-import Catalog from "./Catalog";
+import TopSales from './TopSales';
+import Catalog from './Catalog';
 
 const Index = () => {
   return (

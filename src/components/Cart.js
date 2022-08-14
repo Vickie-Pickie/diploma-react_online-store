@@ -1,7 +1,10 @@
-import {useDispatch, useSelector} from "react-redux";
-import {Link} from "react-router-dom";
-import cart from "../slices/cart";
-import OrderForm from "./OrderForm";
+import {
+  useDispatch,
+  useSelector,
+} from 'react-redux';
+import { Link } from "react-router-dom";
+import cart from '../slices/cart';
+import OrderForm from './OrderForm';
 
 const Cart = () => {
   const items = useSelector(state => state.cart.items);
