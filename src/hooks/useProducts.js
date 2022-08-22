@@ -6,6 +6,8 @@ import {
 import { useLazyGetCategoryItemsQuery } from '../api/products';
 import { useSearchParams } from 'react-router-dom';
 
+const PRODUCT_OFFSET = 6;
+
 const useProducts = () => {
   const [fetchCategoryItems, { data, isFetching, isError }] = useLazyGetCategoryItemsQuery();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -35,7 +37,7 @@ const useProducts = () => {
 
     setProducts([...products, ...data]);
 
-    if (data.length < 6) {
+    if (data.length < PRODUCT_OFFSET) {
       setIsLastPage(true);
     }
   }, [data]);
@@ -45,14 +47,14 @@ const useProducts = () => {
     setOffset(0);
     setIsLastPage(false);
     setActiveCategory(categoryId);
-  });
+  }, []);
 
   const changeSearch = useCallback((search) => {
     setSearch(search);
     setOffset(0);
     setProducts([]);
     setIsLastPage(false);
-  });
+  }, []);
 
   useEffect(() => {
     if (searchParams.has('search') && search !== searchParams.get('search')) {

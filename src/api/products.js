@@ -14,7 +14,7 @@ export const productsApi = createApi({
     getCategoryItems: builder.query({
       query: ({ categoryId, offset, q }) => {
         const searchParams = new URLSearchParams({ categoryId, offset, q });
-        if (categoryId === 0) {
+        if (!categoryId) {
           searchParams.delete('categoryId')
         }
 

@@ -22,8 +22,7 @@ const CategoriesList = ({onCategoryChange, activeCategory}) => {
     <>
       {
       !isLoading && <ul className="catalog-categories nav justify-content-center">
-        <CategoryItem key={0}
-                      title={'Все'}
+        <CategoryItem title={'Все'}
                       onClick={(e) => handleCategoryClick(e, 0)}
                       isActive={activeCategory === 0}
         />
